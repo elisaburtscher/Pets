@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> 
+        <label>Schriftfarbe
+            <input id="text_farbe" type="color">
+            </input>
+            <!--<select id="text_farbe">
+            <option value="red">
+                rot
+            </option>
+            <option value="orange">
+                orange
+            </option>
+            <option value="yellow">
+                gelb
+            </option>
+            <option value="green">
+                grün
+            </option>
+            <option value="blue">
+                blau
+            </option>
+            <option value="purple">
+                violett
+            </option>
+            <option value="pink" selected>
+                pink
+            </option>
+            <option value="white">
+                weiß
+            </option><option value="black">
+                schwarz
+            </option>
+        </select>-->
+        </label>
+    </p>
+
+    <p>
+        <label>Hintergrundfarbe
+            <input id="background_farbe" type="color">
+            </input>
+            <!--<select id="background_farbe">
+            <option value="red">
+                rot
+            </option>
+            <option value="orange">
+                orange
+            </option>
+            <option value="yellow">
+                gelb
+            </option>
+            <option value="green">
+                grün
+            </option>
+            <option value="blue">
+                blau
+            </option>
+            <option value="purple">
+                violett
+            </option>
+            <option value="pink">
+                pink
+            </option>
+            <option value="white">
+                weiß
+            </option>
+            <option value="black" selected>
+                schwarz
+            </option>
+        </select>-->
+        </label>
+    </p>
+
+    <p>
+        <button id="save" style="font-size: 25pt">
+            💖
+        </button>
+    </p>
+
+    <script>
+        const button = document.getElementById("save")
+        button.addEventListener("click", ()=>{
+            const textfarbe = document.getElementById("text_farbe").value
+            const hintergrundfarbe = document.getElementById("background_farbe").value
+            document.body.style.backgroundColor = hintergrundfarbe
+            document.body.style.color = textfarbe
+            localStorage.setItem ("background_color", hintergrundfarbe)
+            localStorage.setItem ("text_color", textfarbe)
+            history.back()
+        })
+      
+    </script>
+</body>
+</html>
