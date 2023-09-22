@@ -1,5 +1,7 @@
 # Pets
 
+This project is a website presenting my two pet cats.
+
 Clean datasets written on Visual Studio Code in html.
 
 To use dataset:
